@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-configuration>
+    <session-factory>
+
+        <!-- Database connection -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/wareops_lite</property>
+
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">Yuva2007@</property>
+
+        <!-- SQL dialect -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+
+        <!-- Show SQL -->
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+
+        <!-- Auto-create/update tables -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!-- Entities (Annotation based) -->
+        <mapping class="com.wareops.entity.Warehouse"/>
+        <mapping class="com.wareops.entity.Product"/>
+        <mapping class="com.wareops.entity.Supplier"/>
+        <mapping class="com.wareops.entity.Bin"/>
+        <mapping class="com.wareops.entity.PurchaseReceipt"/>
+        <mapping class="com.wareops.entity.PurchaseItem"/>
+        <mapping class="com.wareops.entity.StockLedger"/>
+        <mapping class="com.wareops.entity.SalesOrder"/>
+        <mapping class="com.wareops.entity.OrderItem"/>
+        <mapping class="com.wareops.entity.Dispatch"/>
+        <mapping class="com.wareops.entity.ReturnLog"/>
+    </session-factory>
+</hibernate-configuration>
